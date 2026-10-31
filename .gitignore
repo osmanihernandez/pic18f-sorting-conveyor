@@ -1,0 +1,16 @@
+# MPLAB X generated files
+**/build/
+**/dist/
+**/debug/
+**/nbproject/private/
+
+# Compiler-generated files
+*.o
+*.d
+*.elf
+*.map
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log
