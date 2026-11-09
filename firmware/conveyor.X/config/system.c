@@ -17,4 +17,21 @@ void System_Init(void)
 
     // Configure relay as output
     TRISCbits.TRISC3 = 0;
+    
+    
+    // Ultrasonic TRIG
+    LATDbits.LATD0 = 0;
+    TRISDbits.TRISD0 = 0;
+
+    // Ultrasonic ECHO
+    ANSELBbits.ANSB1 = 0;
+    TRISBbits.TRISB1 = 1;
+
+    // Object detection LED
+    LATDbits.LATD2 = 0;
+    TRISDbits.TRISD2 = 0;
+
+    // Timer1: 1 us per count at 8 MHz
+    T1CON = 0x10;
+
 }
