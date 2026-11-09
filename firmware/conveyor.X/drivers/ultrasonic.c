@@ -61,7 +61,7 @@ void Ultrasonic_Update(void)
 
             if(PIR1bits.TMR1IF == 0)
             {
-                echo_end =
+                echo_end =  
                     ((unsigned int)TMR1H << 8) | TMR1L;
 
                 echo_time = echo_end - echo_start;
@@ -85,5 +85,5 @@ void Ultrasonic_Update(void)
     LATDbits.LATD2 = object_detected;
 
     // Wait before next measurement
-    __delay_ms(60);
+        __delay_ms(60);
 }

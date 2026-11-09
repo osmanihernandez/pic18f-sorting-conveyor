@@ -4,10 +4,13 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="New Folder 1" projectFiles="true">
+      </logicalFolder>
       <itemPath>app/conveyor.h</itemPath>
       <itemPath>config/system.h</itemPath>
       <itemPath>drivers/dc_motor.h</itemPath>
       <itemPath>drivers/ultrasonic.h</itemPath>
+      <itemPath>drivers/servo.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -27,6 +30,7 @@
       <itemPath>app/conveyor.c</itemPath>
       <itemPath>drivers/dc_motor.c</itemPath>
       <itemPath>drivers/ultrasonic.c</itemPath>
+      <itemPath>drivers/servo.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -171,6 +175,7 @@
         <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
+        <property key="firmware.download.all" value="false"/>
         <property key="hwtoolclock.frcindebug" value="false"/>
         <property key="lastid" value=""/>
         <property key="memories.aux" value="false"/>

@@ -1,25 +1,37 @@
 
 #include <xc.h>
-
 #include "config/system.h"
 #include "app/conveyor.h"
 #include "drivers/ultrasonic.h"
+#include "drivers/servo.h"
+
+#define _XTAL_FREQ 8000000
 
 void main(void)
 {
-    // Initialize hardware
     System_Init();
+    Servo_Init();
 
-    while(1)
+    while (1)
     {
-        // Handle motor START/STOP buttons
         Conveyor_Task();
-        
-        // Measure distance and update LED
         Ultrasonic_Update();
-        
-        // Pause to inspect variables
-        //__debug_break();
 
+        if (object_detected == 1)
+        {
+            __delay_ms(1000);
+
+            Servo_Move(1);
+
+            __delay_ms(1000);
+
+            Servo_Move(0);
+
+            do
+            {
+                Ultrasonic_Update();
+            }
+            while (object_detected == 1);
+        }
     }
 }
