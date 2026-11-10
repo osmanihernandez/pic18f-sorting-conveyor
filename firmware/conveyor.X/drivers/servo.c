@@ -8,7 +8,7 @@ void Servo_Init(void)
     TRISCbits.TRISC2 = 0;
     LATCbits.LATC2 = 0;
 
-    Servo_Move(0);
+    Servo_Move(1);
 }
 
 void Servo_Move(unsigned char position)
@@ -22,7 +22,7 @@ void Servo_Move(unsigned char position)
         if (position == 0)
             __delay_us(750);
         else
-            __delay_us(2250);
+            __delay_us(1600);
 
         LATCbits.LATC2 = 0;
 
@@ -33,8 +33,8 @@ void Servo_Move(unsigned char position)
         }
         else
         {
-            __delay_ms(17);
-            __delay_us(750);
+            __delay_ms(18);
+            __delay_us(400);
         }
     }
 }

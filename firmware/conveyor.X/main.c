@@ -19,13 +19,13 @@ void main(void)
 
         if (object_detected == 1)
         {
+            __delay_ms(1650);
+
+            Servo_Move(0);
+
             __delay_ms(1000);
 
             Servo_Move(1);
-
-            __delay_ms(1000);
-
-            Servo_Move(0);
 
             do
             {

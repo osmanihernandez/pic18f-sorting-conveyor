@@ -85,5 +85,5 @@ void Ultrasonic_Update(void)
     LATDbits.LATD2 = object_detected;
 
     // Wait before next measurement
-        __delay_ms(60);
+         __delay_ms(60);
 }
