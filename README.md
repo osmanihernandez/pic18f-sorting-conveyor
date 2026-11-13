@@ -4,11 +4,9 @@
 
 A microcontroller-based conveyor prototype developed for an Embedded Systems Programming course at Florida International University. The system uses ultrasonic object detection to trigger a servo-driven sorting action while controlling conveyor movement through a relay-switched DC motor.
 
-## Project demonstration
+## Project Demonstration
 
-🎬 \*\*[Watch the conveyor system in action](## Project Demonstration
-
-[▶ Watch the Automated Conveyor System](docs/Automated_Sorting_Conveyor.mp4))\*\*
+https://github.com/user-attachments/assets/65fd9ee1-3424-4edf-a60b-181823ff22e9
 
 > **Video preview:** GitHub cannot generate an embedded video preview from a Google Drive **folder** link. To display a playable video preview here, upload the MP4 directly to a GitHub issue or pull request, copy the resulting `github.com/user-attachments/assets/...` URL, and paste that URL on its own line below. GitHub will render the video player where supported.
 >
