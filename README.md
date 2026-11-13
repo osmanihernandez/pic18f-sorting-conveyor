@@ -6,7 +6,9 @@ A microcontroller-based conveyor prototype developed for an Embedded Systems Pro
 
 ## Project demonstration
 
-🎬 **[Watch the conveyor system in action](https://drive.google.com/drive/folders/1-WeaPZisz4ft54mvrOh-TGeojOB92rUD)**
+🎬 \*\*[Watch the conveyor system in action](## Project Demonstration
+
+[▶ Watch the Automated Conveyor System](docs/Automated_Sorting_Conveyor.mp4))\*\*
 
 > **Video preview:** GitHub cannot generate an embedded video preview from a Google Drive **folder** link. To display a playable video preview here, upload the MP4 directly to a GitHub issue or pull request, copy the resulting `github.com/user-attachments/assets/...` URL, and paste that URL on its own line below. GitHub will render the video player where supported.
 >
@@ -24,29 +26,29 @@ The current firmware uses a polling-based main loop and blocking delays for sequ
 
 ## Hardware
 
-| Component | Function |
-| --- | --- |
-| PIC18LF45K22 microcontroller on Explorer 8 development board | Embedded controller; GPIO and hardware timer |
-| HC-SR04 ultrasonic sensor | Object detection via trigger and echo timing |
-| SG90 servo motor | Sorting actuator |
-| DC conveyor motor | Moves objects along the belt |
-| Relay and transistor driver | Switches motor power from a PIC GPIO signal |
-| START and STOP pushbuttons | Manual conveyor control |
-| Detection LED | Visual indication of object detection |
-| External motor and servo power | Supplies actuator current separately from PIC I/O |
-| Resistors and interconnect wiring | Input interfacing and circuit connections |
+| Component                                                    | Function                                          |
+| ------------------------------------------------------------ | ------------------------------------------------- |
+| PIC18LF45K22 microcontroller on Explorer 8 development board | Embedded controller; GPIO and hardware timer      |
+| HC-SR04 ultrasonic sensor                                    | Object detection via trigger and echo timing      |
+| SG90 servo motor                                             | Sorting actuator                                  |
+| DC conveyor motor                                            | Moves objects along the belt                      |
+| Relay and transistor driver                                  | Switches motor power from a PIC GPIO signal       |
+| START and STOP pushbuttons                                   | Manual conveyor control                           |
+| Detection LED                                                | Visual indication of object detection             |
+| External motor and servo power                               | Supplies actuator current separately from PIC I/O |
+| Resistors and interconnect wiring                            | Input interfacing and circuit connections         |
 
 ### PIC pin assignments
 
-| PIC signal | Connection | Direction |
-| --- | --- | --- |
-| RA5 | START button | Input |
-| RB0 | STOP button | Input |
-| RB1 | HC-SR04 ECHO | Input |
-| RD0 | HC-SR04 TRIG | Output |
-| RD2 | Object detection LED | Output |
-| RC3 | Relay driver control | Output |
-| RC2 | SG90 servo signal | Output |
+| PIC signal | Connection           | Direction |
+| ---------- | -------------------- | --------- |
+| RA5        | START button         | Input     |
+| RB0        | STOP button          | Input     |
+| RB1        | HC-SR04 ECHO         | Input     |
+| RD0        | HC-SR04 TRIG         | Output    |
+| RD2        | Object detection LED | Output    |
+| RC3        | Relay driver control | Output    |
+| RC2        | SG90 servo signal    | Output    |
 
 **Electrical interfacing:** The HC-SR04 ECHO output can reach 5 V; a resistor divider is used when interfacing with a lower-voltage PIC input. The servo and motor require suitable external supplies. Connect grounds together where required for the control signals, and do not power a motor directly from a PIC GPIO pin. Verify the actual supply voltage and relay-driver circuit before wiring.
 
@@ -81,7 +83,7 @@ firmware/
         └── conveyor.h
 ```
 
-*Folder layout is illustrative of the modular project organization; check the repository for the exact paths in the committed MPLAB X project.*
+_Folder layout is illustrative of the modular project organization; check the repository for the exact paths in the committed MPLAB X project._
 
 ### Control sequence
 
@@ -135,4 +137,3 @@ Trigger HC-SR04 and measure ECHO pulse
 ## Scope and future improvements
 
 The demonstrated prototype focuses on ultrasonic detection and servo-based sorting. Possible extensions include a TCS3200 color sensor for color classification, a nonblocking finite-state machine, improved fault handling, and quantitative sorting-accuracy testing. These are **future improvements**, not claims of completed functionality.
-
